@@ -1,0 +1,23 @@
+
+{% assign url_parts = page.url | split: '/' %}
+{% assign rm = url_parts | last %}
+{% assign base_url = page.url %}
+{% if rm == 'index.html' %}
+    {% assign base_url = base_url | replace: rm %}
+{% endif %}
+
+<ul>
+{% for node in site.pages %}
+  {% if node.url contains base_url %}
+    {% assign checkArray = node.url | split: base_url %}
+    {% if checkArray[0] == '' %}
+        <li>
+            <a href='{{node.url}}'>{{node.title}}</a>
+            {% if node.description %}
+                - {{node.description}}
+            {% endif %}
+        </li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+<h2 id="all">All Changelogs
+    {% if include.reverse %}
+        <a title="toggle sort order" class="ui-link" href="{% link updates.html %}">&uarr;</a>
+    {% else %}
+        <a title="toggle sort order" class="ui-link" href="{% link updates-reverse.html %}">&darr;</a>
+    {% endif %}
+</h2>
+
+<ul>
+{% for tag in site.tags %}
+    {% if tag[0] == 'update' %}
+        {% assign posts = tag[1] | reverse %}
+        {% if include.reverse %}
+            {% assign posts = tag[1] %}
+        {% endif %}
+        {% for post in posts %}
+            <li><a href="{{ post.url }}">{{ post.update }} Changelog</a> - {{ post.date | date: "%A %B %-d, %Y" }}</li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>

@@ -1,0 +1,43 @@
+{% assign color1 = page.background[2] %}
+{% assign color2 = page.background[3] %}
+{% assign opacity = page.background[4] | default: 0.2 %}
+
+{% assign scale = 14.4 %}
+
+{% assign l = page.title | size | times: 3 %}
+{% assign w = page.title | split: ' ' | size | times: 7 %}
+{% assign i = page.title | split: 'i' | size | times: 13 %}
+{% assign a = page.title | split: 'a' | size | times: 19 %}
+{% assign rand = l | plus: w | plus: i | plus: a %}
+{% assign num1 = rand | times: 1 | plus: 1 | modulo: 100 | times: scale %}
+{% assign num2 = rand | times: 2 | plus: 2 | modulo: 100 | times: scale %}
+{% assign num3 = rand | times: 3 | plus: 3 | modulo: 100 | times: scale %}
+{% assign num4 = rand | times: 4 | plus: 4 | modulo: 100 | times: scale %}
+{% assign num5 = rand | times: 5 | plus: 5 | modulo: 100 | times: scale %}
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="250" preserveAspectRatio="xMidYMin" viewBox="0 0 1440 250" style="position: absolute; bottom: 0; height: auto; width: auto; min-width: 100%;">
+    <g mask="url(&quot;#SvgjsMask1015&quot;)" fill="none">
+        <rect width="1440" height="250" x="0" y="0" fill="rgba({{ color1 }}, 1)"></rect>
+        <path d="M2 250L252 0L375 0L125 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M277.6 250L527.6 0L710.6 0L460.6 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M506.2 250L756.2 0L1039.7 0L789.7 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M719.8 250L969.8 0L1040.3 0L790.3 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M1432 250L1182 0L988.5 0L1238.5 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M1165.4 250L915.4 0L670.9 0L920.9 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M917.8 250L667.8 0L579.3 0L829.3 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M722.2 250L472.2 0L326.7 0L576.7 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M1210.8 250L1440 20.8 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M0 250L229.2 250L 0 20.8z" fill="url(#SvgjsLinearGradient1017)"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1015"><rect width="1440" height="250" fill="#ffffff"></rect></mask>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="SvgjsLinearGradient1016">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="SvgjsLinearGradient1017">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+    </defs>
+</svg>

@@ -1,0 +1,6 @@
+{% for tag in site.tags %}
+    {% if tag[0] == 'update' %}
+        {% assign post = tag[1][0] %}
+        <span class="current-version-text">{{ post.update }}</span>
+    {% endif %}
+{% endfor %}

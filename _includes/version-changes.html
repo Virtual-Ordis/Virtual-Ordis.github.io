@@ -1,0 +1,14 @@
+{% for tag in site.tags %}
+    {% if tag[0] == 'update' %}
+        {% assign post = tag[1][0] %}
+        {% assign changes = post.major-changes | strip_newlines | remove_first: "- " | split: "- " %}
+        {% for change in changes %}
+            <li><b>{{ change }}</b></li>
+        {% endfor %}
+        <p></p>
+        {% assign changes = post.minor-changes | strip_newlines | remove_first: "- " | split: "- " %}
+        {% for change in changes %}
+            <li>{{ change }}</li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}

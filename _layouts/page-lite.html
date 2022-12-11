@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="post">
+
+	<header class="post-header-lite">
+        <div class="wrapper">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+        </div>
+	</header>
+	<div class="info-bar-lite">
+        <div class="wrapper">
+            {% include breadcrumbs.html %}
+        </div>
+	</div>
+
+	<div class="wrapper">
+        <div class="post-content">
+            {{ content }}
+        </div>
+	</div>
+
+</article>

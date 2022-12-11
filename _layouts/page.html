@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<article class="post">
+
+	<header class="post-header">
+        {% assign back = page.background[0] %}
+        {% assign dark = page.background[1] %}
+        {% assign attribution = page.attribution %}
+        {% if back == 'rect' %}
+            {% include back-rect.svg %}
+            {% assign attribution = "SVG Background Adapted from --- https://bgjar.com --- BGJar" | split: " --- " %}
+        {% elsif back == 'drect' %}
+            {% include back-drect.svg %}
+            {% assign attribution = "SVG Background Adapted from --- https://bgjar.com --- BGJar" | split: " --- " %}
+        {% elsif back == 'circuits' %}
+            {% include back-circuits.svg %}
+            {% assign attribution = "SVG Background by --- https://bgjar.com --- BGJar" | split: " --- " %}
+        {% endif %}
+        <div class="wrapper">
+            {% if dark %}   
+                <h1 class="post-title dark">{{ page.title | escape }}</h1>
+            {% else %}
+                <h1 class="post-title">{{ page.title | escape }}</h1>
+            {% endif %}
+        </div>
+	</header>
+	<div class="info-bar">
+        <div class="wrapper">
+            {% include breadcrumbs.html %}
+        </div>
+	</div>
+
+	<div class="wrapper">
+        <div class="post-content">
+            {{ content }}
+        </div>
+        {% if attribution %}
+        <div class="attribution" style="text-align:right">
+            <p style="float: right;font-weight: 300;"><i>{{ attribution[0] }} <a target="_blank" href="{{ attribution[1] }}" class="attribution-link">{{ attribution[2] }}</a></i></p>
+        </div>
+        {% endif %}
+	</div>
+
+</article>

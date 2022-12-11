@@ -37,7 +37,36 @@ defaults:
       path: "Languages" # an empty string here means all files in the project
     values:
       layout: language
-      categories: language
+      categories: languages
+  
+  -
+    scope:
+      path: "_posts/updates"
+    values:
+      layout: update
+      categories: updates
+      excerpt_separator: <!--more-->
+      
+
+# Header
+header_pages:
+  - index.md
+  - Countries/index.html
+  - Languages/index.html
+  - Locations/index.html
+  - Space/index.html
+  - People/index.html
+  - Cultures/index.html
+  - Objects/index.html
+  - Events/index.html
+  - about.md
+
+future: true
+
+permalink: /:categories/:title/
+
+settings:
+  copyright: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

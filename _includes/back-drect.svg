@@ -1,0 +1,62 @@
+{% assign color1 = page.background[2] %}
+{% assign color2 = page.background[3] %}
+{% assign opacity = page.background[4] | default: 0.2 %}
+
+{% assign l = page.title | size | times: 3 %}
+{% assign w = page.title | split: ' ' | size | times: 7 %}
+{% assign i = page.title | split: 'i' | size | times: 13 %}
+{% assign a = page.title | split: 'a' | size | times: 19 %}
+{% assign rand = l | plus: w | plus: i | plus: a %}
+{% assign num1 = rand | times: 1 | plus: 1 | modulo: 100 | minus: 50 | plus: 0 %}
+{% assign num2 = rand | times: 2 | plus: 2 | modulo: 100 | minus: 50 | plus: 250 %}
+{% assign num3 = rand | times: 3 | plus: 3 | modulo: 100 | minus: 50 | plus: 500 %}
+{% assign num4 = rand | times: 4 | plus: 4 | modulo: 100 | minus: 50 | plus: 750 %}
+{% assign num5 = rand | times: 5 | plus: 5 | modulo: 100 | minus: 50 | plus: 1300 %}
+{% assign num6 = rand | times: 6 | plus: 6 | modulo: 100 | minus: 50 | plus: 1100 %}
+{% assign num7 = rand | times: 7 | plus: 7 | modulo: 100 | minus: 50 | plus: 900 %}
+{% assign num8 = rand | times: 8 | plus: 8 | modulo: 100 | minus: 50 | plus: 700 %}
+{% assign num9 = rand | times: 9 | plus: 9 | modulo: 100 %}
+{% assign num0 = rand | times: 10 | plus: 10 | modulo: 100 %}
+
+<svg class="background-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="250" preserveAspectRatio="none" viewBox="0 0 1440 250">
+    <g mask="url(&quot;#SvgjsMask1015&quot;)" fill="none">
+        <rect width="1440" height="250" x="0" y="0" fill="rgba({{ color1 }}, 1)"></rect>
+        <path d="M{{ 0 | plus: num1 }} 250L{{ 250 | plus: num1 }} 0L{{ 375 | plus: num1 }} 0L{{ 125 | plus: num1 }} 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M{{ 0 | plus: num2 }} 250L{{ 250 | plus: num2 }} 0L{{ 433 | plus: num2 }} 0L{{ 183 | plus: num2 }} 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M{{ 0 | plus: num3 }} 250L{{ 250 | plus: num3 }} 0L{{ 534 | plus: num3 }} 0L{{ 284 | plus: num3 }} 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M{{ 0 | plus: num4 }} 250L{{ 250 | plus: num4 }} 0L{{ 320 | plus: num4 }} 0L{{ 70 | plus: num4 }} 250z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M{{ 0 | plus: num5 }} 250L{{ -250 | plus: num5 }} 0L{{ -445 | plus: num5 }} 0L{{ -195 | plus: num5 }} 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M{{ 0 | plus: num6 }} 250L{{ -250 | plus: num6 }} 0L{{ -495 | plus: num6 }} 0L{{ -245 | plus: num6 }} 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M{{ 0 | plus: num7 }} 250L{{ -250 | plus: num7 }} 0L{{ -338 | plus: num7 }} 0L{{ -88 | plus: num7 }} 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M{{ 0 | plus: num8 }} 250L{{ -250 | plus: num8 }} 0L{{ -395 | plus: num8 }} 0L{{ -145 | plus: num8 }} 250z" fill="url(#SvgjsLinearGradient1017)"></path>
+        <path d="M{{ 0 | plus: num2 }} 0L{{ 250 | plus: num2 }} 250L{{ 375 | plus: num2 }} 250L{{ 125 | plus: num2 }} 0z" fill="url(#SvgjsLinearGradient1016a)"></path>
+        <path d="M{{ 0 | plus: num4 }} 0L{{ 250 | plus: num4 }} 250L{{ 433 | plus: num4 }} 250L{{ 183 | plus: num4 }} 0z" fill="url(#SvgjsLinearGradient1016a)"></path>
+        <path d="M{{ 0 | plus: num6 }} 0L{{ 250 | plus: num6 }} 250L{{ 534 | plus: num6 }} 250L{{ 284 | plus: num6 }} 0z" fill="url(#SvgjsLinearGradient1016a)"></path>
+        <path d="M{{ 0 | plus: num8 }} 0L{{ 250 | plus: num8 }} 250L{{ 320 | plus: num8 }} 250L{{ 70 | plus: num8 }} 0z" fill="url(#SvgjsLinearGradient1016a)"></path>
+        <path d="M{{ 0 | plus: num7 }} 0L{{ -250 | plus: num7 }} 250L{{ -445 | plus: num7 }} 250L{{ -195 | plus: num7 }} 0z" fill="url(#SvgjsLinearGradient1017a)"></path>
+        <path d="M{{ 0 | plus: num1 }} 0L{{ -250 | plus: num1 }} 250L{{ -495 | plus: num1 }} 250L{{ -245 | plus: num1 }} 0z" fill="url(#SvgjsLinearGradient1017a)"></path>
+        <path d="M{{ 0 | plus: num3 }} 0L{{ -250 | plus: num3 }} 250L{{ -338 | plus: num3 }} 250L{{ -88 | plus: num3 }} 0z" fill="url(#SvgjsLinearGradient1017a)"></path>
+        <path d="M{{ 0 | plus: num5 }} 0L{{ -250 | plus: num5 }} 250L{{ -395 | plus: num5 }} 250L{{ -145 | plus: num5 }} 0z" fill="url(#SvgjsLinearGradient1017a)"></path>
+        <path d="M{{ 1400 | minus: num9 }} 250L1440 250L1440 {{ 210 | minus: num9 }}z" fill="url(#SvgjsLinearGradient1016)"></path>
+        <path d="M0 250L{{ 250 | minus: num0 }} 250L 0 {{ num0 }}z" fill="url(#SvgjsLinearGradient1017)"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1015"><rect width="1440" height="250" fill="#ffffff"></rect></mask>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="SvgjsLinearGradient1016">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="SvgjsLinearGradient1017">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="SvgjsLinearGradient1016a">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="SvgjsLinearGradient1017a">
+            <stop stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba({{ color2 }}, {{ opacity }})" offset="0.66"></stop>
+        </linearGradient>
+    </defs>
+</svg>

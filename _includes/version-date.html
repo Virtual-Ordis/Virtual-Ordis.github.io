@@ -1,0 +1,6 @@
+{% for tag in site.tags %}
+    {% if tag[0] == 'update' %}
+        {% assign post = tag[1][0] %}
+        {{ post.date | date: include.format }}
+    {% endif %}
+{% endfor %}

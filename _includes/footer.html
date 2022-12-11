@@ -1,0 +1,63 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <h2 class="footer-heading"><a class="footer-heading-link" rel="author" href="{{ '/' | relative_url }}">
+        <img style="width: 50px; padding-right: 0.15em; vertical-align: middle;" src="/assets/icon.png"/><span style="vertical-align: middle;">{{ site.title | escape }}</span>
+      </a></h2>
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <!-- <ul class="contact-list">
+            <li class="p-name">
+              {%- if site.author -%}
+                {{ site.author | escape }}
+              {%- else -%}
+                {{ site.title | escape }}
+              {%- endif -%}
+              </li>
+              {%- if site.email -%}
+              <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              {%- endif -%}
+          </ul> -->
+          <p class="compact">{% include version.html %}</p>
+          {%- include social.html -%}
+        </div>
+  
+        <div class="footer-col footer-col-2">
+            <p class="compact"><a href="/">Home</a></p>
+            <!-- <p class="compact"><a href="/updates">Updates</a></p> -->
+            <p class="compact"><a href="/about/">About</a></p>
+            
+        </div>
+  
+        <div class="footer-col footer-col-3">
+            <p class="compact"><a href="/Countries/">Countries</a></p>
+            <p class="compact"><a href="/Events/">Events</a></p>
+            <p class="compact"><a href="/Locations/">Locations</a></p>
+            <p class="compact"><a href="/Space/">Space</a></p>
+          <!-- <p>{{- site.description | escape -}}</p> -->
+        </div>
+
+        <div class="footer-col footer-col-4">
+            <p class="compact"><a href="/Languages/">Languages</a></p>
+            <p class="compact"><a href="/People/">People</a></p>
+            <p class="compact"><a href="/Cultures/">Cultures</a></p>
+            <p class="compact"><a href="/Objects/">Objects</a></p>
+          <!-- <p>{{- site.description | escape -}}</p> -->
+        </div>
+
+        <div class="footer-col foot-col-5">
+            <p class="compact"><a href="/suggestions/?page={{ page.url }}">Suggestions</a></p>
+        </div>
+
+        
+      </div>
+      {% if site.settings.copyright %}
+      <p id="copyright" class="compact" style="font-size: small; font-weight: 300; text-align: right;">
+        &copy; 2022 Dylan Roscow
+      </p>
+        {% endif %}
+    </div>
+  </footer>

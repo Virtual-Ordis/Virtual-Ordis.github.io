@@ -1,0 +1,30 @@
+---
+layout: page-lite
+title: Suggestions
+permalink: /suggestions
+---
+
+<h2>Make a Suggestion <span style="text-transform: lowercase;">or</span> <span style="display: inline-block;">Report an Issue</span></h2>
+
+<fieldset style="margin-bottom: 120px; border-radius: 5px;">
+    <form
+  action="https://formspree.io/f/mvoyelod"
+  method="POST"
+  role="form"
+>
+  <label>
+    Contact:
+    <input type="text" id="contact" name="contact" placeholder="name / email" required>
+  </label>
+  <label>
+    Page:
+    <input type="text" id="page" name="page" placeholder="(optionally) which page this applies to"></input>
+  </label>
+  <label>
+    Suggestion/Issue:
+    <textarea name="message" id="message" style="height: 220px;" placeholder="..." required></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Submit</button>
+</form>
+</fieldset>
