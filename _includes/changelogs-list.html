@@ -14,7 +14,7 @@
             {% assign posts = tag[1] %}
         {% endif %}
         {% for post in posts %}
-            <li><a href="{{ post.url }}">{{ post.update }} Changelog</a> - {{ post.date | date: "%A %B %-d, %Y" }}</li>
+            <li><a href="{{ post.url }}">{{ post.update }} Changelog</a> - <span class="date">{{ post.date | date: "%A %B %-d, %Y" }}</span></li>
         {% endfor %}
     {% endif %}
 {% endfor %}

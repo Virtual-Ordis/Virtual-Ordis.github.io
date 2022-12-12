@@ -143,6 +143,7 @@
   border-top: 1px solid $grey-color-light;
   background-color: #f8f8f8;
   padding: $spacing-unit 0;
+  margin-top: $spacing-unit;
 
   a {
     color: darken($brand-color, 7%);
@@ -167,6 +168,15 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+
+  @include media-query($on-palm) {
+    > li {
+      display: inline;
+      span {
+        display: none;
+      }
+    }
+  }
 }
 
 .footer-col-wrapper {
@@ -188,6 +198,13 @@
 .footer-col-1 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+
+  @include media-query($on-palm) {
+    > * {
+      display: inline-block;
+      margin-right: $spacing-unit * 3 / 4;
+    }
+  }
 }
 
 .footer-col-2 {
@@ -210,7 +227,7 @@
   width:         calc(52% - (#{$spacing-unit} / 2));
 }
 
-@include media-query($on-laptop) {
+@include media-query($on-tablet) {
   .footer-col-1 {
     width: -webkit-calc(40% - (#{$spacing-unit} / 2));
     width:         calc(40% - (#{$spacing-unit} / 2));
@@ -409,6 +426,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: $spacing-unit;
   margin-bottom: $spacing-unit / 2;
+
+  @include media-query($on-tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .triple-split-div {
@@ -420,10 +441,25 @@
   &.combine-left {
     grid-template-columns: 2fr 1fr;
     grid-gap: $spacing-unit;
+    @include media-query($on-tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &.combine-right {
     grid-template-columns: 1fr 2fr;
     grid-gap: $spacing-unit;
+    @include media-query($on-tablet) {
+      grid-template-columns: 1fr;
+    }
   }
+
+  @include media-query($on-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+span.date {
+  display: inline-block;
 }
