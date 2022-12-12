@@ -1,0 +1,17 @@
+{% capture default_format %}<li><a class="ui-link underline-link" href="{{ site.url }}{url}">{title}&nbsp;<span class="mini-text">{url}</span></a></li>{% endcapture %}
+{% assign format_string = include.format | default: default_format %}
+
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script defer>
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '{{ format_string }}',
+        fuzzy: true,
+        limit: {{ include.limit | default: "undefined" }},
+        noResultsText: "(No Results Found)"
+    });
+</script>

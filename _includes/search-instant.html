@@ -1,0 +1,10 @@
+{% include search-script.html %}
+
+<script>
+    window.addEventListener("load", function() { // DOMContentLoaded
+        setTimeout(function() {
+            let path = window.location.pathname.replace('/', ' ');
+            sjs.search(path.replace('/', ' '));
+        }, 200);
+    });
+</script>

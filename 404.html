@@ -22,4 +22,11 @@ layout: default
 
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
+  <input style="display: none;" type="text" id="search-input" placeholder="Search Virtual Ordis...">
+  <p style="margin-top: 30px;"><b>Did you mean one of these?</b></p>
+  <ul id="results-container" style="min-height: 10px; margin-left: 0;">(Searching...)</ul>
+  <p><a class="ui-link" href="/search">- Search For More Results -</a></p>
 </div>
+
+{% capture format %}<li style="margin-bottom: 6px;"><a href="{{ site.url }}{url}" class="ui-link underline-link">{title}<p class="mini-text" style="margin-top: -3px;">{url}</p></a></li>{% endcapture %}
+{% include search-instant.html format=format limit=5 %}

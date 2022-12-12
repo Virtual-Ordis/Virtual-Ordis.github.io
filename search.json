@@ -1,0 +1,30 @@
+---
+layout: none
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.categories | join: ', ' }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}"
+    },
+  {% endfor %}
+  {% for post in site.pages %}
+    {
+      {% unless site.settings.exclude_search contains post.url %}
+      {% if post.title != nil %}
+        "title"    : "{{ post.title | escape }}",
+        "category" : "{{ post.categories | join: ', ' }}",
+        "tags"     : "{{ post.tags | join: ', ' }}",
+        "url"      : "{{ site.baseurl }}{{ post.url }}",
+        "redirect" : "{{ post.redirect_from | join: ', ' }}",
+        "date"     : "{{ post.date }}",
+        "content"  : "{{ post.content | strip_html | strip_newlines | escape }}",
+        "extra"    : "{{ post.title | replace: ' ', '-' }} {{ post.url | replace: '/', ' '}} {{ post.url | replace: '/', ' ' | replace: '-', ' ' }} {{ post.url | replace: '/', ' ' | replace: '.', ' ' }}"
+    {% endif %}
+    {% endunless %}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

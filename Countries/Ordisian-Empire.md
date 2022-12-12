@@ -5,4 +5,6 @@ capital: Ordisia
 description: The most prominent empire on Ordis.
 layout: page
 published: false
+redirect_from:
+    - /Ordisian-Empire/
 ---
