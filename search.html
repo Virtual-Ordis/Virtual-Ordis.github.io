@@ -9,8 +9,20 @@ redirect_from:
     - /finding/
 ---
 
-<input type="text" id="search-input" placeholder="Search Virtual Ordis...">
+<input type="text" id="search-input" placeholder="Search Virtual Ordis..." autofocus>
 <ul id="results-container"></ul>
 
 {% include search-script.html %}
 
+<script>
+    let search_idx = 0;
+    document.addEventListener("keydown", (event) => {
+        if (event.isComposing || event.keyCode === 229) {
+            return;
+        }
+        console.log(event.code);
+        if (event.code == "Enter") {
+            document.getElementById("results-container").childNodes[search_idx].firstChild.click();
+        }
+    });
+</script>

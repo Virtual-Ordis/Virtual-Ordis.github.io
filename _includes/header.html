@@ -24,9 +24,19 @@
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {% include navigation-dropdown.html url=my_page.url title=my_page.title %}
             {%- endfor -%}
-            <a class="page-link" href="{% link search.html %}">{% include search-icon.svg %}</a>
+            <a class="page-link" id="search-icon" href="{% link search.html %}">{% include search-icon.svg %}</a>
           </div>
         </nav>
+        <script>
+            document.addEventListener("keydown", (event) => {
+                if (event.isComposing || event.keyCode === 229) {
+                    return;
+                }
+                if (event.code == "Space" && event.ctrlKey) {
+                    document.getElementById("search-icon").click();
+                }
+            });
+        </script>
       {%- endif -%}
     </div>
   </header>

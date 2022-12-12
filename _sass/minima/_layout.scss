@@ -479,9 +479,19 @@ span.date {
 #results-container {
   min-height: 100vh;
   list-style-type: none;
+  margin-left: 0;
 
   li {
     margin-bottom: $spacing-unit / 3;
+    margin-left: $spacing-unit * 4 / 5;
+    margin-right: $spacing-unit;
+    padding-left: $spacing-unit / 5;
+  }
+
+  > :first-child {
+    background-color: lighten($grey-color-light, 3%);
+    padding: $spacing-unit / 5;
+    margin-bottom: $spacing-unit * 2 / 15;
   }
 }
 
