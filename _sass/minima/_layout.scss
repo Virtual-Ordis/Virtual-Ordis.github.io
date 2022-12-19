@@ -146,7 +146,7 @@
   border-top: 1px solid $grey-color-light;
   background-color: #f8f8f8;
   padding: $spacing-unit 0;
-  margin-top: $spacing-unit;
+  margin-top: $spacing-unit / 6;
 
   a {
     color: darken($brand-color, 7%);
@@ -399,7 +399,7 @@
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit * 2;
 
   h2 {
     @include relative-font-size(2);
@@ -472,6 +472,58 @@
 }
 
 
+.facts {
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  background-color: #f8f8f8;
+  border: 1px solid $grey-color-light;
+  padding: $spacing-unit / 3;
+  font-size: 14px;
+  p, ul, ol { margin-bottom: $spacing-unit / 3; }
+
+  @include media-query($on-tablet) {
+    grid-template-columns: 4fr 7fr 4fr 7fr;
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 4fr 7fr;
+  }
+}
+
+.fact-title {
+  text-align: center;
+  grid-column: span 2;
+  font-family: $head-font-family;
+  margin-bottom: $spacing-unit / 6;
+
+  @include media-query($on-tablet) {
+    grid-column: span 4;
+  }
+
+  @include media-query($on-palm) {
+    grid-column: span 2;
+  }
+}
+
+.fact-title-text {
+  margin-bottom: $spacing-unit / 6;
+  padding-bottom: $spacing-unit / 6;
+  border-bottom: 2px solid #e0e0e0;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+.fact-name {
+  font-weight: 600;
+}
+
+.fact-value {
+  ul, ol {
+    margin-left: $spacing-unit / 2;
+  }
+}
+
+
 span.date {
   display: inline-block;
 }
@@ -504,3 +556,5 @@ span.date {
 .underline-link:hover {
   text-decoration: underline;
 }
+
+

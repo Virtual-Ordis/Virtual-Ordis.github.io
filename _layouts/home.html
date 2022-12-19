@@ -8,18 +8,19 @@ layout: default
             <h1 class="post-title">Virtual Ordis</h1>
         </div>
 	</header>
-    <div class="info-bar-lite"></div>
+  <div class="info-bar-placeholder" style="height: 15px;"></div>
+    <!-- <div class="info-bar-lite"></div> -->
 
 	<div class="wrapper">
         <div class="post-content">
             <div class="home">
-                {%- if page.title -%}
+                <!-- {%- if page.title -%}
                   <h1 class="page-heading">{{ page.title }}</h1>
-                {%- endif -%}
+                {%- endif -%} -->
               
                 {{ content }}
               
-              
+<!--               
                 {% if site.paginate %}
                   {% assign posts = paginator.posts %}
                 {% else %}
@@ -66,7 +67,7 @@ layout: default
                     </div>
                   {%- endif %}
               
-                {%- endif -%}
+                {%- endif -%} -->
               
               </div>
         </div>

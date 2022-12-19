@@ -6,4 +6,5 @@ redirect_from:
     - /home/
     - /virtual-ordis/
 ---
-# Hello Virtual Ordis
+
+<h2 style="text-align: center;">Version 2 of Virtual Ordis is Coming Soon</h2>

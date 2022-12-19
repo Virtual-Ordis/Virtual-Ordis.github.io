@@ -1,6 +1,6 @@
 ---
 title: Markdown Reference
-background: ["drect", true, "0, 0, 135", "25, 25, 295"]
+background: ["drect", true, "100, 100, 235", "25, 25, 295"]
 published: true
 ---
 

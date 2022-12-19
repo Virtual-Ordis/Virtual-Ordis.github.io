@@ -2,7 +2,22 @@
 layout: page
 ---
 
-<p>Language Name: {{ page.language }}</p>
-<p>Spoken In: {{ page.locations }}</p>
+<!-- <p>Language Name: {{ page.language }}</p>
+<p>Spoken In: {{ page.locations }}</p> -->
+
+{% capture left %}
+{{ page.lede }}
+{% endcapture %}
+
+{% capture right %}
+{% include facts.html
+    language=page.language
+    locations=page.locations
+    ancestry=page.ancestry
+    descendents=page.descendents
+    writing-system=page.writing-system %}
+{% endcapture %}
+
+{% include double-left.html left=left right=right %}
 
 {{ content }}

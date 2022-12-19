@@ -4,11 +4,9 @@ layout: page
 {% capture left %}
 <h2>Current Version: {% include version-text.html %}</h2>
 <p>Released: {% include version-date.html format="%b %-d, %Y" %}</p>
-<ul>
     {% include version-changes.html %}
     <p></p>
     <a href="{% include version-link.html %}">Read More...</a>
-</ul>
 {% endcapture %}
 
 {% capture right %}

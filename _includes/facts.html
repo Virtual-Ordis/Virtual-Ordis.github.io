@@ -1,0 +1,11 @@
+<div class="facts">
+    <!-- {% assign facts = include | where_exp: "fact", "fact[1]" %} -->
+    {% for fact in include %}
+        {% if forloop.first %}
+            <div class="fact-title"><p class="fact-title-text">{{ fact[1] | replace: "-", " " | capitalize }}</p></div>
+        {% else %}
+            <div class="fact-name"><p>{{ fact[0] | replace: "-", " " | capitalize }}</p></div>
+            <div class="fact-value">{{ fact[1] | markdownify }}</div>
+        {% endif %}
+    {% endfor %}
+</div>
